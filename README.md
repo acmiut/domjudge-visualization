@@ -14,8 +14,8 @@ These scripts are available at `src/sql/`
 (TODO): more scripts
 
 To have the scripts work, consider the following:  
-* Replace `<JudgeTeam>` in every SQL script to the name of your Judge's team. e.g.: `DOMjudge`.
-* Replace `<ContestShortName>` in every SQL script to the name of the contest you are doing the visualization for. e.g.: `ACM45`.
+* Replace `<YourJudgeTeam>` in every SQL script to the name of your Judge's team. e.g.: `DOMjudge`.
+* Replace `<YourContestShortName>` in every SQL script to the name of the contest you are doing the visualization for. e.g.: `ACM45`.
 
 #### R scripts
 (TODO)
