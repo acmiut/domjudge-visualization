@@ -7,10 +7,11 @@ This project contains **SQL** and **R** scripts in order to obtain data from dom
 #### SQL scripts
 These scripts are available at `src/sql/`
 
-1. `all-submissions.sql`: Obtains total number of submission in a particular contest which are submitted by participants (not Judge).  
+1. `all-submissions.sql`: Obtains total number of submission in a particular contest which are submitted by participants (not the Judge).  
 2. `team-submissions.sql`: Obtains number of submissions a team made during a particular contest.  
 3. `teams-verdicts.sql`: Obtains number of submissions teams made during a particular contests grouped by the verdict their submissions got.  
-4. (TODO) `verdicts.sql`: Obtains number of submissions grouped by their verdicts.
+4. (TODO) `verdicts.sql`: Obtains number of submissions grouped by their verdicts.  
+(TODO): more scripts
 
 #### R scripts
 (TODO)
