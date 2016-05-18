@@ -16,8 +16,8 @@ from (
         join team t on s.teamid = t.teamid
         join contestproblem cp on s.probid = cp.probid and s.cid = cp.cid
         join judging j on s.submitid = j.submitid
-    where c.shortname = '<Contest Short Name>'
-        and t.name != 'DOMjudge'
+    where c.shortname = '<YourContestShortName>'
+        and t.name != '<YourJudgeTeam>'
     group by shortname
     with rollup
 ) as counts
