@@ -4,4 +4,5 @@
 .Ruserdata
 *.Rproj
 data
-src/test.sql
+src/sql/test.sql
+src/sql/test.r
