@@ -25,6 +25,7 @@ These scripts are available at `src/r/`. The results are saved into `data/plot/`
 
 ## Installing
 This project depends on these packages:
+
 1. **MySQL**  
 2. **R**  
 3. **ggplot** library for R.  
