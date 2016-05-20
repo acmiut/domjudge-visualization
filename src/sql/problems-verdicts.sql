@@ -1,8 +1,4 @@
-select IfNull(shortname, 'Total') as shortname,
-    correct, wronganswer, timelimit, memorylimit, outputlimit, runerror, nooutput, compilererror,
-    correct + wronganswer + timelimit + memorylimit + outputlimit + runerror + nooutput + compilererror as Total
-from (
-    select cp.shortname,
+select cp.shortname,
     count(case when j.result = 'correct' then 1 else null end) as correct,
     count(case when j.result = 'wrong-answer' then 1 else null end) as wronganswer,
     count(case when j.result = 'timelimit' then 1 else null end) as timelimit,
@@ -11,13 +7,11 @@ from (
     count(case when j.result = 'run-error' then 1 else null end) as runerror,
     count(case when j.result = 'no-output' then 1 else null end) as nooutput,
     count(case when j.result = 'compiler-error' then 1 else null end) as compilererror
-    from submission s
-        join contest c on s.cid = c.cid
-        join team t on s.teamid = t.teamid
-        join contestproblem cp on s.probid = cp.probid and s.cid = cp.cid
-        join judging j on s.submitid = j.submitid
-    where c.shortname = '<YourContestShortName>'
-        and t.name != '<YourJudgeTeam>'
-    group by shortname
-    with rollup
-) as counts
+from submission s
+    join contest c on s.cid = c.cid
+    join team t on s.teamid = t.teamid
+    join contestproblem cp on s.probid = cp.probid and s.cid = cp.cid
+    join judging j on s.submitid = j.submitid
+where c.shortname = '<YourContestShortName>'
+    and t.name != '<YourJudgeTeam>'
+group by shortname
